@@ -2,51 +2,86 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #000000; /* Fundo preto, igual ao logo */
-    color: #ffffff; /* Texto branco pra contraste */
+    background: #000000;
+    color: #ffffff;
     text-align: center;
 }
 
 header {
-    background-color: #000000; /* Fundo preto no cabeçalho */
+    background-color: #000000;
     color: white;
     padding: 30px;
+}
+
+/* Animação de brilho para o logo */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #00b7eb; }
+    50% { box-shadow: 0 0 20px #00b7eb; }
+    100% { box-shadow: 0 0 10px #00b7eb; }
 }
 
 .logo {
     max-width: 200px;
     margin-bottom: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 15px #00b7eb; /* Sombra azul neon pra remeter aos raios */
+    box-shadow: 0 0 15px #00b7eb;
+    animation: glow 2s infinite; /* Aplica a animação de brilho */
 }
 
 .logo:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px #00b7eb; /* Sombra azul mais intensa no hover */
+    box-shadow: 0 0 25px #00b7eb;
 }
 
 h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #00b7eb; /* Azul do texto "FLORIPA" no logo */
+    color: #00b7eb;
 }
 
 h2 {
-    color: #00b7eb; /* Azul nos títulos das seções */
+    color: #00b7eb;
 }
 
 p {
-    color: #ffffff; /* Texto branco pra legibilidade */
+    color: #ffffff;
 }
 
-.video-section, .plans-section {
+/* Estilo da seção de introdução */
+.intro-section {
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.intro-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Seção de vídeo */
+.video-section {
     margin: 60px 0;
 }
 
 iframe {
     max-width: 80%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 183, 235, 0.5); /* Sombra azul no vídeo */
+    box-shadow: 0 4px 10px rgba(0, 183, 235, 0.5);
+}
+
+/* Seção de planos destacada */
+.plans-section {
+    margin: 60px 0;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, rgba(0, 183, 235, 0.1), rgba(0, 183, 235, 0.3));
+    border: 2px solid #00b7eb;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 183, 235, 0.5);
 }
 
 .plans-container {
@@ -57,29 +92,29 @@ iframe {
 }
 
 .plan {
-    background-color: #1a1a1a; /* Cinza escuro pra contrastar com o fundo preto */
-    border: 1px solid #00b7eb; /* Borda azul nos planos */
+    background-color: #1a1a1a;
+    border: 1px solid #00b7eb;
     border-radius: 10px;
     padding: 25px;
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 183, 235, 0.3); /* Sombra azul nos planos */
+    box-shadow: 0 4px 8px rgba(0, 183, 235, 0.3);
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .plan:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 183, 235, 0.5); /* Sombra azul mais intensa no hover */
+    box-shadow: 0 6px 12px rgba(0, 183, 235, 0.5);
 }
 
 .price {
     font-size: 1.5em;
-    color: #00b7eb; /* Preço em azul */
+    color: #00b7eb;
     margin: 15px 0;
 }
 
 .whatsapp-button {
     display: inline-block;
-    background-color: #25D366; /* Verde do WhatsApp */
+    background-color: #25D366;
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -90,11 +125,11 @@ iframe {
 }
 
 .whatsapp-button:hover {
-    background-color: #00b7eb; /* Azul no hover, pra combinar com o tema */
+    background-color: #00b7eb;
 }
 
 footer {
-    background-color: #000000; /* Fundo preto no rodapé */
+    background-color: #000000;
     color: white;
     padding: 15px;
     position: relative;
@@ -105,22 +140,22 @@ footer {
 .footer-logo {
     max-width: 100px;
     margin-right: 10px;
-    box-shadow: 0 0 10px #00b7eb; /* Sombra azul no logo do rodapé */
+    box-shadow: 0 0 10px #00b7eb;
 }
 
 .whatsapp-fixed {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25D366; /* Verde do WhatsApp */
+    background-color: #25D366;
     padding: 10px;
     border-radius: 50%;
-    box-shadow: 0 2px 10px rgba(0, 183, 235, 0.3); /* Sombra azul no botão fixo */
+    box-shadow: 0 2px 10px rgba(0, 183, 235, 0.3);
     transition: box-shadow 0.3s ease;
 }
 
 .whatsapp-fixed:hover {
-    box-shadow: 0 4px 15px rgba(0, 183, 235, 0.6); /* Sombra azul mais intensa no hover */
+    box-shadow: 0 4px 15px rgba(0, 183, 235, 0.6);
 }
 
 .whatsapp-fixed img {
@@ -135,19 +170,7 @@ footer {
     }
 
     iframe {
-        width: 90%;
+        width: 100%;
+        height: 200px;
     }
-    @keyframes glow {
-    0% { box-shadow: 0 0 10px #00b7eb; }
-    50% { box-shadow: 0 0 20px #00b7eb; }
-    100% { box-shadow: 0 0 10px #00b7eb; }
-}
-
-.logo {
-    max-width: 200px;
-    margin-bottom: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 0 15px #00b7eb;
-    animation: glow 2s infinite; /* Animação de brilho */
-
 }
