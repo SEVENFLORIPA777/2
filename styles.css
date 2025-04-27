@@ -135,8 +135,8 @@ iframe {
 .plans-section {
     margin: 60px 0;
     padding: 40px 20px;
-    background: linear-gradient(180deg, rgba(0, 183, 235, 0.05), rgba(0, 183, 235, 0.15)); /* Gradiente mais suave */
-    border: 2px solid #00eaff; /* Borda mais clara pra destacar */
+    background: #1a1a1a; /* Fundo sólido cinza escuro */
+    border: 4px solid #00eaff; /* Borda mais grossa e mais clara */
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 183, 235, 0.5);
 }
