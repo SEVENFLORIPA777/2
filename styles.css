@@ -13,7 +13,6 @@ header {
     padding: 30px;
 }
 
-/* Animação de brilho para o logo */
 @keyframes glow {
     0% { box-shadow: 0 0 10px #00b7eb; }
     50% { box-shadow: 0 0 20px #00b7eb; }
@@ -25,7 +24,7 @@ header {
     margin-bottom: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 15px #00b7eb;
-    animation: glow 2s infinite; /* Aplica a animação de brilho */
+    animation: glow 2s infinite;
 }
 
 .logo:hover {
@@ -47,7 +46,6 @@ p {
     color: #ffffff;
 }
 
-/* Estilo da seção de introdução */
 .intro-section {
     margin: 40px 0;
     padding: 20px;
@@ -63,7 +61,6 @@ p {
     margin: 10px 0;
 }
 
-/* Seção de vídeo */
 .video-section {
     margin: 60px 0;
 }
@@ -74,7 +71,6 @@ iframe {
     box-shadow: 0 4px 10px rgba(0, 183, 235, 0.5);
 }
 
-/* Seção de planos destacada */
 .plans-section {
     margin: 60px 0;
     padding: 40px 20px;
@@ -110,6 +106,63 @@ iframe {
     font-size: 1.5em;
     color: #00b7eb;
     margin: 15px 0;
+}
+
+/* Estilo da seção de depoimentos */
+.testimonials-section {
+    margin: 60px 0;
+    padding: 40px 20px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #1a1a1a; /* Cinza escuro, igual aos planos */
+    border: 1px solid #00b7eb; /* Borda azul neon */
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 183, 235, 0.3); /* Sombra azul */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 183, 235, 0.5);
+}
+
+.quote {
+    font-style: italic;
+    color: #e0e0e0; /* Cinza claro pra citação */
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.quote::before, .quote::after {
+    content: '"';
+    color: #00b7eb; /* Aspas em azul neon */
+    font-size: 1.5em;
+    position: absolute;
+}
+
+.quote::before {
+    left: -10px;
+    top: -5px;
+}
+
+.quote::after {
+    right: -10px;
+    bottom: -5px;
+}
+
+.author {
+    font-weight: bold;
+    color: #00b7eb; /* Nome do autor em azul */
 }
 
 .whatsapp-button {
@@ -164,7 +217,7 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .plans-container {
+    .plans-container, .testimonials-container {
         flex-direction: column;
         align-items: center;
     }
