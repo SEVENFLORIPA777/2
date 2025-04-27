@@ -137,4 +137,17 @@ footer {
     iframe {
         width: 90%;
     }
+    @keyframes glow {
+    0% { box-shadow: 0 0 10px #00b7eb; }
+    50% { box-shadow: 0 0 20px #00b7eb; }
+    100% { box-shadow: 0 0 10px #00b7eb; }
+}
+
+.logo {
+    max-width: 200px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px #00b7eb;
+    animation: glow 2s infinite; /* Animação de brilho */
+
 }
