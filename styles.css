@@ -2,13 +2,13 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #003366, #1a1a3d); /* Gradiente azul escuro */
-    color: #333;
+    background: #000000; /* Fundo preto, igual ao logo */
+    color: #ffffff; /* Texto branco pra contraste */
     text-align: center;
 }
 
 header {
-    background-color: #003366;
+    background-color: #000000; /* Fundo preto no cabeçalho */
     color: white;
     padding: 30px;
 }
@@ -17,16 +17,26 @@ header {
     max-width: 200px;
     margin-bottom: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px #00b7eb; /* Sombra azul neon pra remeter aos raios */
 }
 
 .logo:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 25px #00b7eb; /* Sombra azul mais intensa no hover */
 }
 
 h1 {
     margin: 0;
     font-size: 2.5em;
+    color: #00b7eb; /* Azul do texto "FLORIPA" no logo */
+}
+
+h2 {
+    color: #00b7eb; /* Azul nos títulos das seções */
+}
+
+p {
+    color: #ffffff; /* Texto branco pra legibilidade */
 }
 
 .video-section, .plans-section {
@@ -36,7 +46,7 @@ h1 {
 iframe {
     max-width: 80%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 183, 235, 0.5); /* Sombra azul no vídeo */
 }
 
 .plans-container {
@@ -47,28 +57,29 @@ iframe {
 }
 
 .plan {
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: #1a1a1a; /* Cinza escuro pra contrastar com o fundo preto */
+    border: 1px solid #00b7eb; /* Borda azul nos planos */
     border-radius: 10px;
     padding: 25px;
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 183, 235, 0.3); /* Sombra azul nos planos */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .plan:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 183, 235, 0.5); /* Sombra azul mais intensa no hover */
 }
 
 .price {
     font-size: 1.5em;
-    color: #007bff;
+    color: #00b7eb; /* Preço em azul */
     margin: 15px 0;
 }
 
 .whatsapp-button {
     display: inline-block;
-    background-color: #25D366;
+    background-color: #25D366; /* Verde do WhatsApp */
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -79,11 +90,11 @@ iframe {
 }
 
 .whatsapp-button:hover {
-    background-color: #1ebd56;
+    background-color: #00b7eb; /* Azul no hover, pra combinar com o tema */
 }
 
 footer {
-    background-color: #003366;
+    background-color: #000000; /* Fundo preto no rodapé */
     color: white;
     padding: 15px;
     position: relative;
@@ -94,16 +105,22 @@ footer {
 .footer-logo {
     max-width: 100px;
     margin-right: 10px;
+    box-shadow: 0 0 10px #00b7eb; /* Sombra azul no logo do rodapé */
 }
 
 .whatsapp-fixed {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25D366;
+    background-color: #25D366; /* Verde do WhatsApp */
     padding: 10px;
     border-radius: 50%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 183, 235, 0.3); /* Sombra azul no botão fixo */
+    transition: box-shadow 0.3s ease;
+}
+
+.whatsapp-fixed:hover {
+    box-shadow: 0 4px 15px rgba(0, 183, 235, 0.6); /* Sombra azul mais intensa no hover */
 }
 
 .whatsapp-fixed img {
